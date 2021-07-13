@@ -1,5 +1,6 @@
 user_funds = 10.31
-item_price = 8.00 #price["Burger"]
+price = {"Burger":5.00,"Pasty":3.20}
+item_price = price["Burger"]#8.00 
 
 if item_price < user_funds:
     print("You have enough money!")
