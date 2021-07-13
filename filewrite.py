@@ -1,4 +1,4 @@
-f = open("myfile.txt", "x")
+f = open("teams.txt", "x")
 
 teams = ["Man U","Celtic","Liverpool","Cardiff City","Dundalk"]
 
@@ -8,7 +8,7 @@ for n in range(1,6):
 
 f.close()
 
-f = open("myfile.txt", "r")
+f = open("teams.txt", "r")
 lines = list(f)
 
 print("Line 1 contents: " + lines[0])

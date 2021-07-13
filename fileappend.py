@@ -1,12 +1,16 @@
-f = open("myfile.txt", "r+")
+f = open("teams.txt", "r")
 
 lines = list(f)
 
-lines[0] = "This is a new line\n"
+f.close()
 
-#f.write("This is a new line")
+f = open("teams.txt", "w")
 
-#lines = list(f)
+lines.insert(0,"This is a new line\n")
+
+liststr = "".join(lines)
+
+f.write(liststr)
 
 for l in lines:
  print(l)
