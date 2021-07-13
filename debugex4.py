@@ -1,5 +1,6 @@
-#import pdb
-#import cmd
+import pdb
+pdb.set_trace()
+
 
 item_list = ["Burger", "Hotdog", "Bun", "Ketchup", "Cheese"]
 n = 0

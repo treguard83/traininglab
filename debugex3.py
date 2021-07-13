@@ -1,5 +1,5 @@
-#import pdb
-#import cmd
+import pdb
+pdb.set_trace()
 
 def is_prime(x):
     if x < 2:
