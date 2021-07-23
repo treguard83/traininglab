@@ -1,3 +1,7 @@
+from application import app, db
+from application.forms import Register, RegisterForm
+from flask import render_template
+
 @app.route('/', methods=["GET","POST"])
 def home():
     form = RegisterForm()
