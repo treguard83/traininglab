@@ -3,7 +3,7 @@ from application.forms import Register, RegisterForm
 from flask import render_template
 
 @app.route('/', methods=["GET","POST"])
-def home():
+def home2():
     form = RegisterForm()
     if form.validate_on_submit():
         person = Register(name=form.name.data)

@@ -1,16 +1,22 @@
 # Import the necessary modules
 from flask import url_for
 from flask_testing import TestCase
+import sys, os, inspect
+currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
+parentdir = os.path.dirname(currentdir)
+sys.path.insert(0, parentdir)
+
+#myPath = Path(r"C:\Users\Administrator\traininglab\ext-flask\flaskunittesting\myproject\application")
 
 # import the app's classes and objects
-from app import app, db, Register
+from application import app, db, Register
 
 # Create the base class
 class TestBase(TestCase):
     def create_app(self):
 
         # Pass in testing configurations for the app. Here we use sqlite without a persistent database for our tests.
-        app.config.update(SQLALCHEMY_DATABASE_URI="sqlite:///",
+        app.config.update(SQLALCHEMY_DATABASE_URI="mysql+pymysql://root:password@127.0.0.1/testdb",
                 SECRET_KEY='TEST_SECRET_KEY',
                 DEBUG=True,
                 WTF_CSRF_ENABLED=False
