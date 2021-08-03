@@ -1,0 +1,33 @@
+<html>
+<head>
+
+</head>
+<body onmousemove="change()">
+<input type="button" value="Red" onmouseleave="red()"><br><br>
+<input type="button" value="Green" onmouseleave="green()"><br><br>
+<input type="text" id="txt" style="position:absolute;top:20;left:300" onmouseleave="takethedata()">
+<span id="t" style="position:absolute;top:200;left:200;">GRUBBMAN
+<script>
+let span1 = document.getElementById("t");
+
+function change() {
+	span1.style.top=event.clientY+20;
+	span1.style.left=event.clientX;
+}
+
+function takethedata() {
+	span1.innerHTML=document.getElementById("txt").value;
+}
+
+function red () {
+	span1.style.color = "red";
+}
+
+function green () {
+	span1.style.color = "green";
+}
+
+</script>
+</span>
+</body>
+</html>
