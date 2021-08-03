@@ -1,0 +1,58 @@
+<html>
+<head>
+<script>
+
+function operation(operator) {
+	let a = document.getElementById("fno").value;
+	let b = document.getElementById("sno").value;
+	if (a==""){
+		alert("First number missing");
+		document.getElementById("fno").focus();
+	}
+	else {
+		if (b==""){
+			alert("Second number missing");
+			document.getElementById("sno").focus();
+		}
+		else {
+			let c = 0;
+			if (operator == '+') {
+				c = parseInt(a) + parseInt(b);		
+			}
+
+			if (operator == '-') {
+				c = parseInt(a) - parseInt(b);		
+			}
+
+			if (operator == 'x') {
+				c = parseInt(a) * parseInt(b);		
+			}
+
+			if (operator == '/') {
+				c = parseInt(a) / parseInt(b);		
+			}
+
+		document.getElementById("result").value = c;
+		}
+	}
+
+}
+
+</script>
+</head>
+<body>
+<h1>Welcome to JavaScript</h1>
+
+First number: <input type="text" id="fno">
+<br>
+Second number: <input type="text" id="sno">
+<br>
+<input type="button" value="+" onClick="operation('+')">
+<input type="button" value="-" onClick="operation('-')">
+<input type="button" value="x" onClick="operation('x')">
+<input type="button" value="/" onClick="operation('/')">
+<br>
+Result is: <input type="text" id="result">
+
+</body>
+</html>
