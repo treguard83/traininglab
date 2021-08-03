@@ -1,0 +1,26 @@
+<html>
+<head>
+<script>
+
+function increment() {
+	let a = document.getElementById("msg").value;
+	document.getElementById("msg").value = parseInt(a) + 1;
+}
+
+function decrement() {
+	let a = document.getElementById("msg").value;
+	document.getElementById("msg").value = parseInt(a) - 1;
+}
+
+</script>
+</head>
+<body>
+<h1>Welcome to JavaScript</h1>
+
+<input type="text" id="msg" value="0">
+<br>
+<input type="button" value="Nationwide" onmousemove="increment()">
+<input type="button" value="QA Limited" onmousemove="decrement()">
+
+</body>
+</html>
