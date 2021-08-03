@@ -1,0 +1,22 @@
+<html>
+<script>
+	function calculations() {
+		let space = 0;
+		let message = document.getElementById("msg").value;
+		let chars = document.getElementById("whatchars").value;
+		for (let a = 0; a < message.length; a++) {
+			if (message.substring(a,a+1)==chars) {
+				space++;
+			}
+		}
+		document.getElementById("yocount").value = space;
+	}
+</script>
+First message <input type="text" id="msg">
+<br>
+Find characters <input type="text" id="whatchars">
+<br>
+<input type="button" value="Count" onclick="calculations()">
+Count:<input id="yocount">
+
+</html>
