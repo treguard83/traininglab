@@ -1,13 +1,19 @@
 <html>
 <script>
 	function calculations() {
+		let space = 0;
 		let message = document.getElementById("msg").value;
-		alert(message.substring(2,7));
+		for (let a = 0; a < message.length; a++) {
+			if (message.substring(a,a+1)==" ") {
+				space++;
+			}
+		}
+		document.getElementById("words").value = (space+1);
 	}
 </script>
 First message <input type="text" id="msg">
 <br>
 <input type="button" value="Count" onclick="calculations()">
-Words:<input>
+Words:<input id="words">
 
 </html>
