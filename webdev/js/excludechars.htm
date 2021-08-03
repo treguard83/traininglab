@@ -1,0 +1,27 @@
+<html>
+<script>
+	function copy() {
+		let message = document.getElementById("msg").value;
+		let newmsg = '';
+		let find = document.getElementById("find").value;
+
+
+		for (let i = 0; i < message.length; i++) {
+
+			if (message.substring(i,i+1)!=find) {
+				newmsg = newmsg + message.substring(i,i+1);
+			}
+
+		}
+
+		document.getElementById("yomsg").value = newmsg;
+	}
+</script>
+Message <input type="text" id="msg">
+<br>
+Copy without <input type="text" id="find">
+<br>
+<input type="button" value="Copy" onclick="copy()">
+Filtered message:<input id="yomsg">
+
+</html>
