@@ -1,20 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/aboutus")
 def aboot():
-	return """
-	<a href="http://localhost:5000">Home</a>
-	<h2>We are THE BEST training company</h2> <br>
-	Our trainers <br>
-	<a href="http://localhost:5000/trainers/shafeeq">Shafeeq</a> <br>
-	Leon <br>
-	Henry <br>
-	Jitesh <br>
-	Jane <br>
-	Paul <br>
-	"""
+	return render_template("aboutus.htm")
 
 @app.route("/trainers/shafeeq")
 def shafeeq():
@@ -25,14 +15,7 @@ def shafeeq():
 
 @app.route("/ourservices")
 def ourservs():
-	return """
-	<a href="http://localhost:5000">Home</a>
-	<h2>We provide the following training</h2> <br>
-	Java <br>
-	Python <br>
-	PHP <br>
-	JavaScript <br>
-	"""
+	return render_template("services.htm")
 
 @app.route("/")
 def homepage():
