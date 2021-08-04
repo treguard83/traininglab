@@ -8,12 +8,19 @@ def aboot():
 	<a href="http://localhost:5000">Home</a>
 	<h2>We are THE BEST training company</h2> <br>
 	Our trainers <br>
-	Shafeeq <br>
+	<a href="http://localhost:5000/trainers/shafeeq">Shafeeq</a> <br>
 	Leon <br>
 	Henry <br>
 	Jitesh <br>
 	Jane <br>
 	Paul <br>
+	"""
+
+@app.route("/trainers/shafeeq")
+def shafeeq():
+	return """
+	<a href="http://localhost:5000">Home</a>
+	<h2>Shafeeq teaches Python</h2>
 	"""
 
 @app.route("/ourservices")
