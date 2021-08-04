@@ -6,7 +6,7 @@ app = Flask(__name__)
 def aboot():
 	return """
 	<a href="http://localhost:5000">Home</a>
-	<h2>We are a training company</h2> <br>
+	<h2>We are THE BEST training company</h2> <br>
 	Our trainers <br>
 	Shafeeq <br>
 	Leon <br>
@@ -41,4 +41,4 @@ def homepage():
 	</html>
 	"""
 
-app.run()
+app.run(debug=True)
