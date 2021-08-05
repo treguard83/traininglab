@@ -1,6 +1,3 @@
-<html>
-<script>
-
 function checkdata(){
 
 	if(document.getElementById("A").value==""){
@@ -16,12 +13,3 @@ function checkdata(){
 	}
 	}
 }
-
-</script>
-
-<form action="/processform" method="post" onsubmit="checkdata()">
-First number: <input id="A" name="no1"><br>
-Second number: <input id="B" name="no2"><br>
-<input type="submit">
-</form>
-</html>
