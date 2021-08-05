@@ -48,7 +48,11 @@ if isValidHWorkScore == True and isValidAssessScore == True and isValidExamScore
    elif finalpcent >= 50 and finalpcent <= 59:
       gradeStr = "D"
    elif finalpcent >= 40 and finalpcent <= 49:
-      gradeStr = "C"
+      gradeStr = "E"
+   elif finalpcent >= 30 and finalpcent <= 39:
+      gradeStr = "F"
+   elif finalpcent >= 20 and finalpcent <= 29:
+      gradeStr = "G"
    else:
       gradeStr = "U"
    print(name + " this means your final grade is: " + gradeStr)
