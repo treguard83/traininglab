@@ -1,0 +1,27 @@
+<html>
+<script>
+
+function checkdata(){
+
+	if(document.getElementById("A").value==""){
+		alert("First number is missing");
+		document.getElementById("A").focus();
+		event.preventDefault();
+	}
+	else{
+	if(document.getElementById("B").value==""){
+		alert("Second number is missing");
+		document.getElementById("B").focus();
+		event.preventDefault();
+	}
+	}
+}
+
+</script>
+
+<form action="/processform" method="post" onsubmit="checkdata()">
+First number: <input id="A" name="no1"><br>
+Second number: <input id="B" name="no2"><br>
+<input type="submit">
+</form>
+</html>
