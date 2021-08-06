@@ -1,14 +1,28 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, make_response
 
 app = Flask(__name__)
 
-@app.route("/")
-def homejames():
-	return render_template("index.htm")
+@app.route("/<c>")
+def homejames(c):
+	res = make_response(render_template("index.htm",color2=c))
+	res.set_cookie("MyColor1",c)
+	print(c)
+	return res
 
 @app.route("/login")
 def login():
 	return render_template("login.htm")
+
+@app.route("/addition")
+def addingnumbers():
+	color1 = request.cookies.get("MyColor1")
+	print("--->"+request.cookies.get("MyColor1"))
+	return render_template("inputform.htm",color2=color1)
+
+@app.route("/processform",methods=['POST'])
+def processform():
+	color1 = request.cookies.get("MyColor1")
+	return render_template("results.htm",qadata=request.form,color2=color1)
 
 @app.route("/loginprocess",methods=['POST'])
 def processlogindata():
