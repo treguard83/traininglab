@@ -1,5 +1,5 @@
 <html>
-<body style="background-color:'{{color2}}'"></body>
+<body style="background-color:{{request.cookies.get('MyColor1')}}"></body>
 <center><h1>Results</h1></center>
 
 First number: {{qadata['no1']}} <br>

@@ -1,11 +1,13 @@
-from flask import Flask, render_template, request, redirect, make_response
+from flask import Flask, render_template, request, redirect, make_response, session
 
 app = Flask(__name__)
+
+app.secret_key="abc"
 
 @app.route("/<c>")
 def homejames(c):
 	res = make_response(render_template("index.htm",color2=c))
-	res.set_cookie("MyColor1",c)
+	session["MyColor1"]=c
 	return res
 
 @app.route("/login")
@@ -38,5 +40,10 @@ def invalidlogin():
 @app.route("/valid")
 def validlogin():
 	return render_template("valid.htm")
+
+@app.route("/logout")
+def logout():
+	session.clear()
+	return redirect("/index.htm")
 
 app.run(debug=True)
