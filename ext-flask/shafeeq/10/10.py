@@ -6,9 +6,9 @@ app.secret_key="abc"
 
 @app.route("/<c>")
 def homejames(c):
-	res = make_response(render_template("index.htm",color2=c))
-	session["MyColor1"]=c
-	return res
+    res = make_response(render_template("index.htm",color2=c))
+    session["MyColor1"]=c
+    return res
 
 @app.route("/login")
 def login():
@@ -16,7 +16,7 @@ def login():
 
 @app.route("/addition")
 def addingnumbers():
-	return render_template("inputform.htm")
+    return render_template("inputform.htm")
 
 @app.route("/processform",methods=['POST'])
 def processform():

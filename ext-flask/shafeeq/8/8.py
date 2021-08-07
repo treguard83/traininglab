@@ -4,9 +4,9 @@ app = Flask(__name__)
 
 @app.route("/<c>")
 def homejames(c):
-	res = make_response(render_template("index.htm",color2=c))
-	res.set_cookie("MyColor1",c)
-	return res
+    res = make_response(render_template("index.htm",color2=c))
+    res.set_cookie('MyColor1',c)
+    return res
 
 @app.route("/login")
 def login():
@@ -14,7 +14,8 @@ def login():
 
 @app.route("/addition")
 def addingnumbers():
-	return render_template("inputform.htm")
+    c = request.cookies.get('MyColor1')
+    return render_template("inputform.htm",MyColor1=c)
 
 @app.route("/processform",methods=['POST'])
 def processform():
